@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins' ,sans-serif ;
+
+}
+
+body{
+	background-color:rgb(139, 255, 131);
+	color: white;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.text-animation{
+	font-size: 45px;
+	font-weight: 880;
+	min-width: 280px;
+
+}
+
+.text-animation span{
+	position: relative;
+
+}
+
+.text-animation span::before{
+	content: 'youtuber';
+	color: #333;
+	animation: words 20s infinite;
+
+}
+
+.text-animation span::after{
+	content:'';
+	background-color: rgb( 139, 255, 131);
+	position: absolute;
+	width: calc(100% + 8px);
+	height: 100%;
+	border-left: 2px solid #333;
+	right: -8px;
+	animation: cursor .6s infinite, typing 20s steps(14) infinite;
+
+}
+
+@keyframes cursor{
+	to{
+		border-left: 2px solid rgb(139,255,131);
+	}
+}
+
+@keyframes words{
+	0%,20%{
+		content: "Fighter";
+	}
+
+	21%,40%{
+		content: "Web Developer";
+	}
+
+	41%,60%{
+		content: "Network Engineer";
+	}
+
+	61%,80%{
+		content: "Computer Security Engr";
+	}
+
+	81%,100%{
+		content: "Front End Developer";
+	}
+}
+
+@keyframes typing{
+	10%,15%,30%,35%,50%,55%,70%,75%,90%{
+		width: 0;
+	}
+	5%,20%,25%,40%,45%,60%,80%,85%{
+		width: calc(100% + 8px);
+	}
+
+
+}
